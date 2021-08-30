@@ -1,17 +1,29 @@
+<head>
+    <title>Klikkailu</title>
+
+</head>
+
+
+<body>
 Miikat ovat Miikkoja
 
-<button type="button" onclick="Klikkaus()"> Klikkaa mua!</button>
-<h1>Miikat</h1>
+<h1>Oppilaiden päät</h1>
+<img onclick="Klikkaus()" src="Smile.png" id="hymy" width="500">
 
 <p>Oppilaat ovat <p id="numero"> 0 </p> kertaa tyhmempiä kuin tunti sitten</p>
 
 <script>
     let klikkaukset = 0;
+
     function Klikkaus(){
         klikkaukset++;
         document.getElementById("numero").innerHTML = klikkaukset
-        if(klikkaukset > 50){
-            alert("Lopeta")
+        
+        if(klikkaukset > 5){
+            document.getElementById("hymy").src = "MindBlown.png"
+            alert("KAIK ON PIHALLA")
         }
     }
 </script>
+
+</body>
